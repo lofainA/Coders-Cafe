@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Quiz Question Page </title>
+  <link rel="stylesheet" href="quizPageStyle.css">
+</head>
+
+<body>
+  <div class="section">
+    <div class="heading">
+      <p>Quiz Name</p>
+    </div>
+    <div id="quiz-container">
+      <div id="question">
+        <!-- Question content will be inserted here -->
+        <p><b>Question 1:</b> What is the capital of France?</p>
+      </div>
+      <div id="options">
+        <!-- Options for the current question will be inserted here -->
+        <div class="option"><input type="radio" name="answer" value="option1">Option 1</br></div>
+        <div class="option"><input type="radio" name="answer" value="option2">Option 2</br></div>
+        <div class="option"><input type="radio" name="answer" value="option3">Option 3</br></div>
+        <div class="option"><input type="radio" name="answer" value="option4">Option 4</br></div>
+      </div>
+      <div id="navigation">
+        <button onclick="previousQuestion()">Previous</button>
+        <button onclick="nextQuestion()">Next</button>
+        <span id="attended-counter">Question 1/10</span>
+        <span id="timer">Time Left: <span id="time">00:00</span></span>
+      </div>
+    </div>
+  </div>
+  
+
+  <script>
+    // JavaScript for timer
+    var timeLeft = 600; // 10 minutes in seconds
+    var timerInterval;
+
+    function startTimer() {
+      timerInterval = setInterval(function() {
+        var minutes = Math.floor(timeLeft / 60);
+        var seconds = timeLeft % 60;
+
+        document.getElementById('time').innerText = (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+
+        if (timeLeft === 0) {
+          clearInterval(timerInterval);
+          // Add any action to be taken when time runs out
+        } else {
+          timeLeft--;
+        }
+      }, 1000);
+    }
+
+    // JavaScript for navigation
+    var currentQuestion = 1;
+    var totalQuestions = 10; // Change this to the total number of questions
+
+    function nextQuestion() {
+      if (currentQuestion < totalQuestions) {
+        
+
+        currentQuestion++;
+        updateQuestion();
+      }
+    }
+
+    function previousQuestion() {
+      if (currentQuestion > 1) {
+        currentQuestion--;
+        updateQuestion();
+      }
+    }
+
+    function updateQuestion() {
+      // Update question content and options dynamically based on currentQuestion
+      document.getElementById('question').innerHTML = "<p>Question " + currentQuestion + ": New Question Content</p>";
+      // Update attended counter
+      document.getElementById('attended-counter').innerText = "Question " + currentQuestion + "/" + totalQuestions;
+    }
+
+    // Start the timer when the page loads
+    window.onload = startTimer;
+  </script>
+</body>
+</html>

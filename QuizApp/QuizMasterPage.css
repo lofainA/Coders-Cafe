@@ -1,0 +1,16 @@
+.section{
+    display:flex;
+    flex-direction: column;
+    gap:100px;
+    padding-left:10%;
+}
+
+#heading2{
+    font-family: Calibri;
+    font-size: 50px;
+}
+
+#start{
+    padding:20px;
+    font-size:24px;
+}

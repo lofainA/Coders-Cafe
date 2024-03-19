@@ -2,7 +2,7 @@ header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-
+    font-family: "Calibri";
     text-align: center;
 }
 
@@ -12,5 +12,6 @@ footer {
     padding: 10px 0;
     text-align: center;
     bottom: 0;
+    position: fixed;
     width: 100%;
 }

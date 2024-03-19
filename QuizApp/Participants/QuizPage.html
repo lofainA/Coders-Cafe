@@ -30,9 +30,9 @@
         <div class="option"><input type="radio" name="answer" value="option4">Option 4</br></div>
       </div>
       <div id="navigation">
-        <button onclick="previousQuestion()">Previous</button>
-        <button onclick="nextQuestion()">Next</button>
-        <span id="attended-counter">Question 1/10</span>
+        <button onclick="previousQuestion()" id="prev">Previous</button>
+        <button onclick="nextQuestion()" id="next">Next</button><br>
+        <span id="attended-counter">Questions attended: 0 <br></span>
         <span id="timer">Time Left: <span id="time">00:00</span></span>
       </div>
     </div>
@@ -65,14 +65,17 @@
 
     // JavaScript for navigation
     var currentQuestion = 1;
+    var questionsAttended = 0;
     var totalQuestions = 10; // Change this to the total number of questions
 
     function nextQuestion() {
       if (currentQuestion < totalQuestions) {
-        
-
         currentQuestion++;
         updateQuestion();
+      }
+
+      else if (currentQuestion == totalQuestions) {
+        document.getElementById("next").innerText = "Submit";
       }
     }
 
@@ -84,10 +87,24 @@
     }
 
     function updateQuestion() {
+
       // Update question content and options dynamically based on currentQuestion
-      document.getElementById('question').innerHTML = "<p>Question " + currentQuestion + ": New Question Content</p>";
-      // Update attended counter
-      document.getElementById('attended-counter').innerText = "Question " + currentQuestion + "/" + totalQuestions;
+      document.getElementById('question').innerHTML = "<p><b>Question " + currentQuestion + "</b>: New Question Content</p>";
+      
+      var ele = document.getElementsByName("answer");
+
+      // Update attended counter if radiobutton is selected
+      for(var i = 0; i < ele.length; i++){
+        if (ele[i].checked == true) {
+          document.getElementById('attended-counter').innerHTML = "<span>Questions attended: " + (questionsAttended + 1) +"<span><br>";
+            questionsAttended++;
+        }
+      }
+
+      // Reset radiobutton selection
+      for(var i = 0; i < ele.length; i++){
+        ele[i].checked = false;
+      }
     }
 
     // Start the timer when the page loads

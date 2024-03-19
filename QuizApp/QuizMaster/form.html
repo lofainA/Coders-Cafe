@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="/Coders-Cafe/QuizApp/hAndf.css">
 </head>
 <style>
-   .center-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+     
+    footer {
+        position:relative;
+    }
+
+   .center-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
    }
    
 </style>
@@ -22,108 +28,109 @@
 
     <main>
         <div class="center-div">
-    
             <div class="form-div">
                 <div>
                     <h1>Quiz Form</h1>
                 </div>
-            <form action="">
+                <form action="">
         
-                <div class="section">
-                    <div>
-                        <label for="QuizName">Quiz Name:</label><br>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <label for="quizdomain">Quiz Domain:</label><br>
-                        <input name="quizdomain" type="text">
-                    </div>
-                    
-                    <div>
-                        <label for="no-of-q">No. of questions:</label><br>
-                        <input id="no-of-q" name="instructions" rows="4" cols="50"></input><br>
-                    </div>
-                    
-                    <div>
-                        <label for="Time">Timing for each question(in seconds):</label><br>
-                        <input type="number" id="timing" name="timing" min="1"><br>
-                    </div>
-                    
-                    <h3>Question Upload:</h3>
-        
-                    <!-- class question-template increases as per no of questions entered by the user -->
-        
-                    <!-- 1st Question-->
-                    <div class="question-template">
+                    <div class="section">
+                        <div>
+                            <label for="QuizName">Quiz Name:</label><br>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label for="quizdomain">Quiz Domain:</label><br>
+                            <input name="quizdomain" type="text">
+                        </div>
                         
-                        <div class="question-in">
-                            <label for="question-text">Enter question:</label>
-                            <textarea type="text" name="question-text"></textarea>
+                        <div>
+                            <label for="no-of-q">No. of questions:</label><br>
+                            <input id="no-of-q" name="instructions" rows="4" cols="50"></input><br>
                         </div>
-        
-                        <div class="option-in">
-                            <div class="opt">
-                                <label for="option-1">Option 1</label>
-                                <input type="text" name="option-1">
-                            </div>
-                            <div class="opt">
-                                <label for="option-2">Option 2</label>
-                                <input type="text" name="option-2">
-                            </div>
-                            <div class="opt">
-                                <label for="option-3">Option 3</label>
-                                <input type="text" name="option-3">
-                            </div>
-                            <div class="opt">
-                                <label for="option-4">Option 4</label>
-                                <input type="text" name="option-4">
-                            </div> 
+                        
+                        <div>
+                            <label for="Time">Timing for each question(in seconds):</label><br>
+                            <input type="number" id="timing" name="timing" min="1"><br>
                         </div>
-        
-                        <div class="answer-in">
-                            <label for="answer">Answer:</label>
-                            <input type="text" name="answer">
-        
+                        
+                        <h3>Question Upload:</h3>
+            
+                        <!-- class question-template increases as per no of questions entered by the user -->
+            
+                        <!-- 1st Question-->
+                        <div class="question-template">
+                            
+                            <div class="question-in">
+                                <label for="question-text">Enter question:</label>
+                                <textarea type="text" name="question-text"></textarea>
+                            </div>
+            
+                            <div class="option-in">
+                                <div class="opt">
+                                    <label for="option-1">Option 1</label>
+                                    <input type="text" name="option-1">
+                                </div>
+                                <div class="opt">
+                                    <label for="option-2">Option 2</label>
+                                    <input type="text" name="option-2">
+                                </div>
+                                <div class="opt">
+                                    <label for="option-3">Option 3</label>
+                                    <input type="text" name="option-3">
+                                </div>
+                                <div class="opt">
+                                    <label for="option-4">Option 4</label>
+                                    <input type="text" name="option-4">
+                                </div> 
+                            </div>
+            
+                            <div class="answer-in">
+                                <label for="answer">Answer:</label>
+                                <input type="text" name="answer">
+            
+                            </div>
+                        </div>
+            
+                        <!-- 2nd Question-->
+                        <div class="question-template">
+                            <div class="question-in">
+                                <label for="question-text">Enter question:</label>
+                                <textarea type="text" name="question-text"></textarea>
+                            </div>
+            
+                            <div class="option-in">
+                                <div class="opt">
+                                    <label for="option-1">Option 1</label>
+                                    <input type="text" name="option-1">
+                                </div>
+                                <div class="opt">
+                                    <label for="option-2">Option 2</label>
+                                    <input type="text" name="option-2">
+                                </div>
+                                <div class="opt">
+                                    <label for="option-3">Option 3</label>
+                                    <input type="text" name="option-3">
+                                </div>
+                                <div class="opt">
+                                    <label for="option-4">Option 4</label>
+                                    <input type="text" name="option-4">
+                                </div> 
+                            </div>
+            
+                            <div class="answer-in">
+                                <label for="answer">Answer:</label>
+                                <input type="text" name="answer">
+            
+                            </div>
                         </div>
                     </div>
-        
-                    <!-- 2nd Question-->
-                    <div class="question-template">
-                        <div class="question-in">
-                            <label for="question-text">Enter question:</label>
-                            <textarea type="text" name="question-text"></textarea>
-                        </div>
-        
-                        <div class="option-in">
-                            <div class="opt">
-                                <label for="option-1">Option 1</label>
-                                <input type="text" name="option-1">
-                            </div>
-                            <div class="opt">
-                                <label for="option-2">Option 2</label>
-                                <input type="text" name="option-2">
-                            </div>
-                            <div class="opt">
-                                <label for="option-3">Option 3</label>
-                                <input type="text" name="option-3">
-                            </div>
-                            <div class="opt">
-                                <label for="option-4">Option 4</label>
-                                <input type="text" name="option-4">
-                            </div> 
-                        </div>
-        
-                        <div class="answer-in">
-                            <label for="answer">Answer:</label>
-                            <input type="text" name="answer">
-        
-                        </div>
-                    </div>
-        
-                    <div class="submit-div"><a><button id="submit">submit</button></a></div>
-                    <!-- <input type="file" id="fileUpload" name="fileUpload"><br><br><br>-->
-                </div>
-            </form>
+                </form>
+            </div>
+            <div class="submit-div">
+                <a href="QuizMasterPage.html"><button id="submit">submit</button></a>
+            </div>
+        </div>
     </main>
 
     <footer>

@@ -28,7 +28,13 @@
     align-self: center;
 }
 
+.center-div {
+    display: flex;
+    flex-direction: column;
+}
+
 .submit-div{
     align-self: center;
+    padding: 20px;
 }
 

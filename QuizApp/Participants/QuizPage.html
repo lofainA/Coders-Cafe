@@ -30,10 +30,15 @@
         <div class="option"><input type="radio" name="answer" value="option4">Option 4</br></div>
       </div>
       <div id="navigation">
-        <button onclick="previousQuestion()" id="prev">Previous</button>
-        <button onclick="nextQuestion()" id="next">Next</button><br>
-        <span id="attended-counter">Questions attended: 0 <br></span>
-        <span id="timer">Time Left: <span id="time">00:00</span></span>
+        <div id="buttons">
+          <button onclick="previousQuestion()" id="prev">Previous</button>
+          <button onclick="nextQuestion()" id="next">Next</button><br>
+        </div>
+        <div id="info">
+          <span id="attended-counter">Questions attended: 0 <br></span>
+          <span id="timer">Time Left: <span id="time">00:00</span></span>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -56,7 +61,7 @@
 
         if (timeLeft === 0) {
           clearInterval(timerInterval);
-          // Add any action to be taken when time runs out
+          // Add action to be taken when time runs out
         } else {
           timeLeft--;
         }
@@ -69,18 +74,27 @@
     var totalQuestions = 10; // Change this to the total number of questions
 
     function nextQuestion() {
-      if (currentQuestion < totalQuestions) {
+      if (currentQuestion <= totalQuestions) {
+        if(currentQuestion == (totalQuestions - 1)){
+          document.getElementById("next").innerText = "Submit";
+        }
+
+        // Redirect to Completed page once submit is clicked
+        if((currentQuestion == totalQuestions)){
+          location.href = "QuizCompletion.html";
+          return;
+        }
         currentQuestion++;
         updateQuestion();
-      }
-
-      else if (currentQuestion == totalQuestions) {
-        document.getElementById("next").innerText = "Submit";
+        
       }
     }
 
     function previousQuestion() {
       if (currentQuestion > 1) {
+        if(document.getElementById("next").innerText = "Submit"){
+          document.getElementById("next").innerText = "Next";
+        }
         currentQuestion--;
         updateQuestion();
       }

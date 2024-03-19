@@ -33,4 +33,21 @@
 #navigation {
     padding-top: 100px;
     padding-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    gap:30px
+}
+
+span {
+    font-family: "Calibri";
+    font-size: 19px;
+}
+
+#buttons {
+    display: flex;
+    gap: 20px
+}
+
+#prev, #next {
+    padding:0.5rem;
 }

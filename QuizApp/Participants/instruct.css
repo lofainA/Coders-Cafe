@@ -1,0 +1,35 @@
+.section{
+    padding-left: 20%;
+    padding-right: 20%;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.but{
+    display: flex;
+    justify-content:center ;
+    padding: 20px;
+}
+
+#heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Calibri;
+}
+
+#instruc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Calibri;
+}
+
+#start {
+    padding: 10px;
+}
+
+#instruction-list {
+    font-family: "Calibri";
+}

@@ -1,3 +1,7 @@
 # Coders-Cafe
 
-The given code of a quiz application has been written in html, css and javascript
+## Quiz Application
+
+### Deployment
+1. Download the repository
+2. Open Home.html to open the website

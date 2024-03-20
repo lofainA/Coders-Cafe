@@ -4,4 +4,4 @@
 
 ### Deployment
 1. Download the repository
-2. Open Home.html to open the website
+2. Open Home.html on your browser to open the webpage
